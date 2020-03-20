@@ -1,5 +1,8 @@
+"""Grabs coronavirus data and prints it in color to the terminal"""
+# External Imports
 import requests
 from termcolor import colored
+
 
 def get_data(url):
     """Gets a JSON from a url
@@ -9,9 +12,10 @@ def get_data(url):
     """
     request = requests.get(url)
     json_ = request.json()
-    
+
     return json_['data']
 
 
 for item in get_data(f'https://covid2019-api.herokuapp.com/v2/current'):
-    print(f"{colored(item['location'], 'yellow')} Confirmed: {colored(item['confirmed'], 'blue')}, Deaths: {colored(item['deaths'], 'red')}, Recovered: {colored(item['recovered'], 'green')}")
+    print(f"{colored(item['location'], 'yellow')} Confirmed: {colored(item['confirmed'], 'blue')},"
+          f" Deaths: {colored(item['deaths'], 'red')}, Recovered: {colored(item['recovered'], 'green')}")
