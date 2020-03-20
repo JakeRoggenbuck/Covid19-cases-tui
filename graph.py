@@ -1,11 +1,9 @@
 import requests
-import json
 import numpy as np
 import matplotlib.pyplot as plt
+from get_covid_data import get_data
 
-full_url = f'https://covid2019-api.herokuapp.com/v2/current'
-request = requests.get(full_url)
-json_ = request.json()
+json_ = get_data('https://covid2019-api.herokuapp.com/v2/current')
 
 n_groups = len(json_['data'])
 location = [item['location'] for item in json_['data']]
