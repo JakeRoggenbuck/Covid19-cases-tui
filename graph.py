@@ -23,16 +23,15 @@ alpha=opacity,
 color='b',
 label='confirmed')
 
-rects2 = plt.bar(index + bar_width, deaths, bar_width,
-alpha=opacity,
-color='r',
-label='deaths')
-
 rects3 = plt.bar(index + bar_width, recovered, bar_width,
 alpha=opacity,
 color='g',
 label='recovered')
 
+rects2 = plt.bar(index + bar_width, deaths, bar_width,
+alpha=opacity,
+color='r',
+label='deaths')
 
 plt.xlabel('Location')
 plt.ylabel('People')
