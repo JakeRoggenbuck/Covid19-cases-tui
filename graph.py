@@ -5,11 +5,11 @@ from get_covid_data import get_data
 
 json_ = get_data('https://covid2019-api.herokuapp.com/v2/current')
 
-n_groups = len(json_['data'])
-location = [item['location'] for item in json_['data']]
-confirmed = [item['confirmed'] for item in json_['data']]
-deaths = [item['deaths'] for item in json_['data']]
-recovered = [item['recovered'] for item in json_['data']]
+n_groups = len(json_)
+location = [item['location'] for item in json_]
+confirmed = [item['confirmed'] for item in json_]
+deaths = [item['deaths'] for item in json_]
+recovered = [item['recovered'] for item in json_]
 
 fig, ax = plt.subplots()
 index = np.arange(n_groups)
