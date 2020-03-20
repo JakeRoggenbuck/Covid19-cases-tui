@@ -33,6 +33,7 @@ def generate_graphs():
                                                   country['deaths'],
                                                   country['recovered']])
     covid_graph.render_to_file('covid_graph.svg')
+    print('Graph generated as covid_graph.svg')
 
 
 generate_graphs()
