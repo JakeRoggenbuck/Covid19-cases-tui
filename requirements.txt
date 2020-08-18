@@ -1,5 +1,6 @@
+requests==2.24.0
+pygal==2.4.0
+numpy==1.19.1
 termcolor==1.1.0
 matplotlib==3.3.0
-numpy==1.19.1
-pygal==2.4.0
 termgraph==0.4.2
